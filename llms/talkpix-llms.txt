@@ -1,0 +1,89 @@
+# TalkPix
+
+> TalkPix is an AI talking photo generator that turns a portrait into a lip-synced video using text or uploaded audio.
+
+## Product facts
+- TalkPix is a browser-based AI content platform for talking and singing photos, original AI songs, voice cloning, talking objects, AI images, virtual influencers, product video ads, product photos, and prompt-to-video creation. Users pay with one-time credit packs rather than a recurring subscription.
+- Talking Photo inputs: portrait photo, text, uploaded audio, recorded audio.
+- Talking Photo output: downloadable MP4 video.
+- The current Talking Photo catalogue lists 30 voices across 10 languages.
+- Talking Photo supports text, uploaded audio, and recorded audio up to five minutes.
+- One-time, pay-as-you-go credit packs; no recurring subscription is required.
+- Eligible new customers can render their first Talking Photo — up to 20 seconds at 720p, typed script — for $1.99 one-time. Reusable credit packs start at $5 and credits never expire.
+- Purchased credits do not expire.
+- Provider-backed generation starts only after successful payment or a sufficient confirmed credit balance.
+- Credits reserved for a generation that fails before successful delivery are returned automatically.
+- Outputs may be used commercially when the user has the necessary rights and consent for every input and follows the TalkPix Terms and applicable third-party platform rules.
+- Normal generation inputs and outputs are subject to the published 30-day retention period. Explicitly saved AI Influencer identities and reusable scene assets remain until the user deletes them.
+
+## How a talking photo is made
+1. Upload or select a portrait.
+2. Enter text, upload audio, or record audio.
+3. Choose the available voice, language, model, and resolution settings.
+4. Review the credit estimate and generate.
+5. Preview the completed job and download the MP4.
+
+## Creation studios
+- [Talking Photo](https://www.talkpix.ai/create)
+- [Singing Photo](https://www.talkpix.ai/create/singing-photo)
+- [AI Song](https://www.talkpix.ai/create/song)
+- [Talking Objects](https://www.talkpix.ai/create/talking-object)
+- [AI Voice](https://www.talkpix.ai/create/voice)
+- [AI Images](https://www.talkpix.ai/create/ai-image)
+- [AI Influencer](https://www.talkpix.ai/create/ai-influencer)
+- [Product Video Ads](https://www.talkpix.ai/create/product-ad)
+- [Product Photos](https://www.talkpix.ai/create/product-photo)
+- [AI Video](https://www.talkpix.ai/create/ai-video)
+
+## AI Video model guides
+- [P-Video 2 Pro](https://www.talkpix.ai/p-video-2-pro-ai-video-generator)
+- [Seedance 1.5 Pro](https://www.talkpix.ai/seedance-1-5-pro-ai-video-generator)
+- [Seedance 2.0 Mini](https://www.talkpix.ai/seedance-2-mini-ai-video-generator)
+- [Seedance 2.0](https://www.talkpix.ai/seedance-2-ai-video-generator)
+- [Seedance 2.5](https://www.talkpix.ai/seedance-2-5-ai-video-generator)
+- [MiniMax H3](https://www.talkpix.ai/minimax-h3-ai-video-generator)
+- [Kling 3.0](https://www.talkpix.ai/kling-3-ai-video-generator)
+
+## AI Image model guides
+- [Seedream 5 Lite](https://www.talkpix.ai/seedream-5-lite-ai-image-generator)
+- [Gemini Flash Image](https://www.talkpix.ai/gemini-flash-image-generator)
+- [Seedream 4.5](https://www.talkpix.ai/seedream-4-5-ai-image-generator)
+- [Seedream 5 Pro](https://www.talkpix.ai/seedream-5-pro-ai-image-generator)
+- [GPT Image](https://www.talkpix.ai/gpt-image-generator)
+
+## Current reusable credit packs
+- Mini: 50 credits for $5.00 USD
+- Starter: 120 credits for $10.00 USD
+- Creator: 350 credits for $25.00 USD
+- Pro: 800 credits for $50.00 USD
+- Studio: 1800 credits for $100.00 USD
+- Agency: 3800 credits for $200.00 USD
+
+Credit cost depends on the selected studio, model, resolution, and output duration. The exact estimate is shown before generation. One credit wallet works across TalkPix studios.
+
+## Canonical product and trust pages
+- [Homepage](https://www.talkpix.ai)
+- [Pricing](https://www.talkpix.ai/pricing)
+- [Talking Photo generator](https://www.talkpix.ai/talking-photo)
+- [Photo lip sync](https://www.talkpix.ai/photo-lip-sync)
+- [AI video examples](https://www.talkpix.ai/ai-video-examples)
+- [Trend templates](https://www.talkpix.ai/trends) — every template also has its own page with a real render, the photos it needs and its credit price, e.g. [AI action figure](https://www.talkpix.ai/trends/action-figure-box), [Earth zoom out](https://www.talkpix.ai/trends/earth-zoom-out), [Hug your younger self](https://www.talkpix.ai/trends/hug-younger-self)
+- [Product video ad generator](https://www.talkpix.ai/product-video-ad-generator)
+- [Product photo generator](https://www.talkpix.ai/product-photo-generator)
+- [Developer API docs](https://www.talkpix.ai/developers)
+- [Guides and blog](https://www.talkpix.ai/blog)
+- [FAQ](https://www.talkpix.ai/faq)
+- [About](https://www.talkpix.ai/about)
+- [Contact](https://www.talkpix.ai/contact)
+- [Terms](https://www.talkpix.ai/terms)
+- [Privacy](https://www.talkpix.ai/privacy)
+- [Human-readable site map](https://www.talkpix.ai/site-map)
+- [XML sitemap](https://www.talkpix.ai/sitemap.xml)
+- [Full reference for agents](https://www.talkpix.ai/llms-full.txt)
+
+## Clarifications
+- TalkPix is a browser-based web application that works on any phone, tablet or computer with nothing to install. There is also a TalkPix app for iPhone and iPad on the App Store ([TalkPix: AI Talking Photo](https://apps.apple.com/us/app/talkpix-ai-talking-photo/id6780175690)). It is sold through the App Store with its own in-app purchases. There is no Android app.
+- The TalkPix web app uses one-time credits, not a required recurring subscription.
+- A REST Developer API (base URL https://www.talkpix.ai/api/v1) starts Talking Photo renders programmatically with an API key created in the account; it spends the same credits at the same rate and reserves them before every render.
+- Credit rates can differ by studio, model, resolution, duration, and output type; use the estimate displayed in the current studio rather than assuming one universal per-second rate.
+- This orientation file does not override the visible product UI, Pricing page, Terms, or Privacy Policy.

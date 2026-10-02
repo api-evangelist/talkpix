@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/talkpix/main/json-schema/talkpix-post-videos-request-schema.json",
+  "title": "PostVideosRequest",
+  "x-generated": "2026-10-02",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/talkpix-openapi-generated.yml#/components/schemas/PostVideosRequest",
+  "type": "object",
+  "properties": {
+    "image_url": {
+      "type": "string",
+      "description": "Public HTTPS URL of a portrait (≤10 MB)"
+    },
+    "image_key": {
+      "type": "string",
+      "description": "Key returned by POST /uploads"
+    },
+    "script": {
+      "type": "string",
+      "description": "What the person says (script mode)"
+    },
+    "voice": {
+      "type": "string",
+      "description": "Voice id or alias, required with script"
+    },
+    "language": {
+      "type": "string",
+      "description": "Language code, required with script"
+    },
+    "voice_prompt": {
+      "type": "string",
+      "description": "Speaking direction for script mode"
+    },
+    "video_prompt": {
+      "type": "string",
+      "description": "Look‑and‑motion direction"
+    },
+    "captions": {
+      "type": "boolean",
+      "description": "Burn captions into MP4 (script mode only)"
+    },
+    "audio_url": {
+      "type": "string",
+      "description": "Public HTTPS URL of audio file (audio mode)"
+    },
+    "audio_key": {
+      "type": "string",
+      "description": "Key returned by POST /uploads with kind: \"audio\""
+    },
+    "resolution": {
+      "type": "string",
+      "description": "\"720p\" or \"1080p\", default 720p"
+    },
+    "webhook_url": {
+      "type": "string",
+      "description": "Endpoint to receive signed POST when render completes"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Up to 20 string values echoed back"
+    }
+  }
+}

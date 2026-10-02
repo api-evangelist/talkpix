@@ -1,0 +1,552 @@
+openapi: 3.1.0
+info:
+  title: TalkPix API API
+  version: '2026-10-02'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-02: 10 operation(s) read from 1 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; TalkPix API has published no machine-readable contract that the
+    pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 9
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-02'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.talkpix.ai/developers
+paths:
+  /api/v1/videos:
+    put:
+      operationId: put_api_v1_videos
+      tags:
+      - Api
+      summary: PUT /api/v1/videos
+      x-source: https://www.talkpix.ai/developers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutApiV1VideosRequest'
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutApiV1VideosResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl https://www.talkpix.ai/api/v1/videos  -H \"Authorization: Bearer tpx_live_…\"  -H \"Content-Type: application/json\"  -d\
+          \ '{\n \"image_url\": \"https://example.com/portrait.jpg\",\n \"script\": \"Hi! This video was made with one API call.\",\n \"voice\"\
+          : \"zephyr\",\n \"language\": \"en-US\",\n \"webhook_url\": \"https://example.com/hooks/talkpix\"\n }' 201 Created {\n \"id\": \"6c1f…\"\
+          ,\n \"object\": \"video\",\n \"status\": \"processi"
+  /api/v1/videos/6c1f…:
+    get:
+      operationId: get_api_v1_videos_6c1f
+      tags:
+      - Api
+      summary: Retrieve one render (status, video_url)
+      x-source: https://www.talkpix.ai/developers
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1Videos6C1FResponse'
+      x-evidence:
+        kind: documentation
+  /api/v1/{v1id}:
+    get:
+      operationId: get_api_v1_v1id
+      tags:
+      - Api
+      summary: Direct‑upload URL for a private photo or audio file
+      x-source: https://www.talkpix.ai/developers
+      parameters:
+      - name: v1id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiV1V1IdResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at v1Id
+  /estimate:
+    post:
+      operationId: post_estimate
+      tags:
+      - Estimate
+      summary: Credits a script will reserve — free
+      x-source: https://www.talkpix.ai/developers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostEstimateRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostEstimateResponse'
+      x-evidence:
+        kind: documentation
+  /me:
+    get:
+      operationId: get_me
+      tags:
+      - Me
+      summary: Account behind the key and its credit balance
+      x-source: https://www.talkpix.ai/developers
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMeResponse'
+      x-evidence:
+        kind: documentation
+  /uploads:
+    post:
+      operationId: post_uploads
+      tags:
+      - Uploads
+      summary: Direct‑upload URL for a private photo or audio file
+      x-source: https://www.talkpix.ai/developers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostUploadsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostUploadsResponse'
+      x-evidence:
+        kind: documentation
+  /videos:
+    get:
+      operationId: get_videos
+      tags:
+      - Videos
+      summary: List renders started with your keys
+      x-source: https://www.talkpix.ai/developers
+      parameters:
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: 1–100, default 20
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Filter by status
+      - name: starting_after
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Pagination cursor (an id)
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVideosResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_videos
+      tags:
+      - Videos
+      summary: Start a talking-photo render
+      x-source: https://www.talkpix.ai/developers
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostVideosRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostVideosResponse'
+      x-evidence:
+        kind: documentation
+  /videos/{id}:
+    get:
+      operationId: get_videos_id
+      tags:
+      - Videos
+      summary: Retrieve one render (status, video_url)
+      x-source: https://www.talkpix.ai/developers
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVideosIdResponse'
+      x-evidence:
+        kind: documentation
+  /voices:
+    get:
+      operationId: get_voices
+      tags:
+      - Voices
+      summary: Voices, languages and direction presets
+      x-source: https://www.talkpix.ai/developers
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetVoicesResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PutApiV1VideosRequest:
+      type: object
+      properties:
+        image_url:
+          type: string
+        script:
+          type: string
+        voice:
+          type: string
+        language:
+          type: string
+        webhook_url:
+          type: string
+    PutApiV1VideosResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        object:
+          type: string
+        status:
+          type: string
+        video_url:
+          type:
+          - string
+          - 'null'
+        resolution:
+          type: string
+        mode:
+          type: string
+        credits_reserved:
+          type: integer
+        credits_charged:
+          type:
+          - string
+          - 'null'
+        created_at:
+          type: string
+          format: date-time
+        balance:
+          type: integer
+    GetApiV1Videos6C1FResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: queued → processing → completed | failed
+        video_url:
+          type: string
+          description: The MP4, set once completed.
+        resolution:
+          type: string
+          description: 720p or 1080p
+        mode:
+          type: string
+          description: script or audio
+        credits_reserved:
+          type: number
+          description: Reserved when the render started
+        credits_charged:
+          type: number
+          description: Final charge after render finished
+        created_at:
+          type: string
+          description: Timestamp of creation
+        balance:
+          type: number
+          description: Account balance after reservation
+        metadata:
+          type: object
+          description: Echoed back metadata
+        error:
+          type: object
+          description: Error object on failure
+    GetApiV1V1IdResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: '"upload"'
+        key:
+          type: string
+          description: Key to reference the uploaded file
+        upload_url:
+          type: string
+          description: URL to PUT the file to
+        method:
+          type: string
+          description: '"PUT"'
+        headers:
+          type: object
+          description: Headers required for the PUT request
+        expires_in:
+          type: integer
+          description: Seconds until the URL expires
+    PostEstimateRequest:
+      type: object
+      properties:
+        script:
+          type: string
+          description: Script text to estimate
+        resolution:
+          type: string
+          description: '"720p" or "1080p"'
+      required:
+      - script
+      - resolution
+    PostEstimateResponse:
+      type: object
+      properties:
+        credits:
+          type: number
+          description: Credits that would be reserved
+    GetMeResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Account identifier
+        balance:
+          type: number
+          description: Current credit balance
+        email:
+          type: string
+          description: Account email
+    PostUploadsRequest:
+      type: object
+      properties:
+        kind:
+          type: string
+          description: '"image" or "audio"'
+        content_type:
+          type: string
+          description: MIME type of the file
+      required:
+      - kind
+      - content_type
+    PostUploadsResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: '"upload"'
+        key:
+          type: string
+          description: Key to reference the uploaded file
+        upload_url:
+          type: string
+          description: URL to PUT the file to
+        method:
+          type: string
+          description: '"PUT"'
+        headers:
+          type: object
+          description: Headers required for the PUT request
+        expires_in:
+          type: integer
+          description: Seconds until the URL expires
+    GetVideosResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: '"list"'
+        data:
+          type: array
+          description: Array of video objects
+        has_more:
+          type: boolean
+          description: Whether more pages exist
+        next_starting_after:
+          type: string
+          description: Cursor for next page
+    PostVideosRequest:
+      type: object
+      properties:
+        image_url:
+          type: string
+          description: Public HTTPS URL of a portrait (≤10 MB)
+        image_key:
+          type: string
+          description: Key returned by POST /uploads
+        script:
+          type: string
+          description: What the person says (script mode)
+        voice:
+          type: string
+          description: Voice id or alias, required with script
+        language:
+          type: string
+          description: Language code, required with script
+        voice_prompt:
+          type: string
+          description: Speaking direction for script mode
+        video_prompt:
+          type: string
+          description: Look‑and‑motion direction
+        captions:
+          type: boolean
+          description: Burn captions into MP4 (script mode only)
+        audio_url:
+          type: string
+          description: Public HTTPS URL of audio file (audio mode)
+        audio_key:
+          type: string
+          description: 'Key returned by POST /uploads with kind: "audio"'
+        resolution:
+          type: string
+          description: '"720p" or "1080p", default 720p'
+        webhook_url:
+          type: string
+          description: Endpoint to receive signed POST when render completes
+        metadata:
+          type: object
+          description: Up to 20 string values echoed back
+    PostVideosResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Video identifier
+        object:
+          type: string
+          description: '"video"'
+        status:
+          type: string
+          description: Initial status, e.g., "processing"
+        video_url:
+          type: string
+          description: null until completed
+        resolution:
+          type: string
+          description: 720p or 1080p
+        mode:
+          type: string
+          description: script or audio
+        credits_reserved:
+          type: number
+          description: Credits reserved for the render
+        credits_charged:
+          type: number
+          description: Will be set after completion
+        created_at:
+          type: string
+          description: Timestamp of creation
+        balance:
+          type: number
+          description: Remaining account balance
+    GetVideosIdResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: queued → processing → completed | failed
+        video_url:
+          type: string
+          description: The MP4, set once completed.
+        resolution:
+          type: string
+          description: 720p or 1080p
+        mode:
+          type: string
+          description: script or audio
+        credits_reserved:
+          type: number
+          description: Reserved when the render started
+        credits_charged:
+          type: number
+          description: Final charge after render finished
+        created_at:
+          type: string
+          description: Timestamp of creation
+        balance:
+          type: number
+          description: Account balance after reservation
+        metadata:
+          type: object
+          description: Echoed back metadata
+        error:
+          type: object
+          description: Error object on failure
+    GetVoicesResponse:
+      type: object
+      properties:
+        voices:
+          type: array
+          description: List of voice objects with id, alias, sex, sample_url
+        languages:
+          type: array
+          description: Supported languages with id and alias
+        voice_prompts:
+          type: array
+          description: Predefined voice_prompt strings
+        video_prompts:
+          type: array
+          description: Predefined video_prompt strings
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api
+- name: Estimate
+- name: Me
+- name: Uploads
+- name: Videos
+- name: Voices

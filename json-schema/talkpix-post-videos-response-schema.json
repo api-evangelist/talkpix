@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/talkpix/main/json-schema/talkpix-post-videos-response-schema.json",
+  "title": "PostVideosResponse",
+  "x-generated": "2026-10-02",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/talkpix-openapi-generated.yml#/components/schemas/PostVideosResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Video identifier"
+    },
+    "object": {
+      "type": "string",
+      "description": "\"video\""
+    },
+    "status": {
+      "type": "string",
+      "description": "Initial status, e.g., \"processing\""
+    },
+    "video_url": {
+      "type": "string",
+      "description": "null until completed"
+    },
+    "resolution": {
+      "type": "string",
+      "description": "720p or 1080p"
+    },
+    "mode": {
+      "type": "string",
+      "description": "script or audio"
+    },
+    "credits_reserved": {
+      "type": "number",
+      "description": "Credits reserved for the render"
+    },
+    "credits_charged": {
+      "type": "number",
+      "description": "Will be set after completion"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Timestamp of creation"
+    },
+    "balance": {
+      "type": "number",
+      "description": "Remaining account balance"
+    }
+  }
+}

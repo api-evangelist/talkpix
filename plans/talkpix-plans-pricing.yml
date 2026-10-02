@@ -1,0 +1,66 @@
+generated: '2026-10-02'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.talkpix.ai/pricing
+sources:
+- https://www.talkpix.ai/pricing
+name: TalkPix API pricing
+audience: developer-api
+pricing_basis: per-seat
+plans:
+- name: First Talking Photo
+  price_text: $1.99 one-time
+  price: 1.99
+  billing_period: one-time
+  description: Eligible new customers can create one HD Talking Photo up to 20 seconds.
+- name: Mini
+  price_text: $5 USD
+  price: 5
+  billing_period: one-time
+  description: 50 credits
+- name: Starter
+  price_text: $10 USD
+  price: 10
+  billing_period: one-time
+  description: 120 credits
+- name: Creator
+  price_text: $25 USD
+  price: 25
+  billing_period: one-time
+  description: 350 credits
+- name: Pro
+  price_text: $50 USD
+  price: 50
+  billing_period: one-time
+  description: 800 credits
+- name: Studio
+  price_text: $100 USD
+  price: 100
+  billing_period: one-time
+  description: 1800 credits
+- name: Agency
+  price_text: $200 USD
+  price: 200
+  billing_period: one-time
+  description: 3800 credits
+- name: Lite Creator
+  price_text: $9 / mo
+  price: 9
+  billing_period: monthly
+  description: 120 credits / month
+- name: Starter Creator
+  price_text: $19 / mo
+  price: 19
+  billing_period: monthly
+  description: 300 credits / month
+- name: Pro Creator & Growth
+  price_text: $49 / mo
+  price: 49
+  billing_period: monthly
+  description: 800 credits / month
+- name: Agency & Pro Studio
+  price_text: $99 / mo
+  price: 99
+  billing_period: monthly
+  description: 2000 credits / month
+docs: https://www.talkpix.ai/pricing

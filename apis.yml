@@ -1,30 +1,119 @@
 aid: talkpix
+
 name: TalkPix API
-description: 'TalkPix API is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.talkpix.ai/opengraph-image
+
+description: TalkPix provides AI-powered talking-photo video generation, turning a portrait and a script or audio into a lip‑synced MP4. Users
+  can upload a photo, add voice or script, and receive a realistic talking video for social media, ads, or product showcases. The service offers
+  multiple AI voices, language support, and credit‑based pricing, with an API for programmatic access.
+
 url: https://raw.githubusercontent.com/api-evangelist/talkpix/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-02 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-02'
+
 modified: '2026-10-02'
+
 tags:
 - Company
-apis: []
+- AI
+- Video
+- Talking Photo
+- Media
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/talkpix-plans-pricing.yml
+- type: Spectral
+  url: rules/talkpix-rules.yml
+- type: JSONLD
+  url: json-ld/talkpix-context.jsonld
+- type: Vocabulary
+  url: vocabulary/talkpix-vocabulary.yml
+- type: DataModel
+  url: data-model/talkpix-data-model.yml
+- type: Conformance
+  url: conformance/talkpix-conformance.yml
+- type: LLMsTxt
+  url: llms/talkpix-llms.txt
+- type: Hosts
+  url: hosts/talkpix-hosts.yml
+- type: Vendors
+  url: vendors/talkpix-vendors.yml
+- type: SDKs
+  url: packages/talkpix-packages.yml
+- type: Packages
+  url: packages/talkpix-packages.yml
+- type: Newsroom
+  url: https://www.talkpix.ai/press
+- type: DomainSecurity
+  url: security/talkpix-domain-security.yml
 - type: Website
   url: https://www.talkpix.ai
 - type: Documentation
   url: https://www.talkpix.ai/developers
-x-submission-notes: Talking-photo video generation API (portrait + script/audio to lip-synced MP4) with
-  webhooks.
-x-submission-probe: root 200; /developers 200 lists /api/v1/uploads, /api/v1/videos; /api/v1/videos 401
-  (auth required); llms.txt 200; no OpenAPI; 404 probe 404
+- type: Blog
+  url: https://www.talkpix.ai/blog
+- type: Pricing
+  url: https://www.talkpix.ai/pricing
+- type: TermsOfService
+  url: https://www.talkpix.ai/terms
+- type: PrivacyPolicy
+  url: https://www.talkpix.ai/privacy
+- type: Support
+  url: https://www.talkpix.ai/contact
+- type: SignUp
+  url: https://www.talkpix.ai/login
+- type: GettingStarted
+  url: https://www.talkpix.ai/developers
+
+apis:
+- aid: talkpix:talkpix-api
+  name: TalkPix API API
+  description: 'TalkPix API API as documented publicly: 10 operations. Contract generated from the documentation by API Evangelist (2026-10-02);
+    not the provider''s own document.'
+  humanURL: https://www.talkpix.ai/developers
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/talkpix-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-request-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-videos6-c1-fresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-videos-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-uploads-response-schema.json
+
+x-submission-notes: Talking-photo video generation API (portrait + script/audio to lip-synced MP4) with webhooks.
+
+x-submission-probe: root 200; /developers 200 lists /api/v1/uploads, /api/v1/videos; /api/v1/videos 401 (auth required); llms.txt 200; no OpenAPI;
+  404 probe 404
+
 x-submitted-by: support@talkpix.ai (apis.io/add, 2026-09-29)
+x-enrichment:
+  date: '2026-10-02'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

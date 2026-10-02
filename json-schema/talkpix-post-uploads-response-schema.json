@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/talkpix/main/json-schema/talkpix-post-uploads-response-schema.json",
+  "title": "PostUploadsResponse",
+  "x-generated": "2026-10-02",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/talkpix-openapi-generated.yml#/components/schemas/PostUploadsResponse",
+  "type": "object",
+  "properties": {
+    "object": {
+      "type": "string",
+      "description": "\"upload\""
+    },
+    "key": {
+      "type": "string",
+      "description": "Key to reference the uploaded file"
+    },
+    "upload_url": {
+      "type": "string",
+      "description": "URL to PUT the file to"
+    },
+    "method": {
+      "type": "string",
+      "description": "\"PUT\""
+    },
+    "headers": {
+      "type": "object",
+      "description": "Headers required for the PUT request"
+    },
+    "expires_in": {
+      "type": "integer",
+      "description": "Seconds until the URL expires"
+    }
+  }
+}

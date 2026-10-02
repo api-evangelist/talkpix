@@ -1,0 +1,183 @@
+{
+  "@context": {
+    "@vocab": "https://talkpix.ai/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "talkpix": "https://talkpix.ai/schema#",
+    "PutApiV1VideosRequest": "talkpix:PutApiV1VideosRequest",
+    "image_url": {
+      "@id": "talkpix:image_url",
+      "@type": "xsd:string"
+    },
+    "script": {
+      "@id": "talkpix:script",
+      "@type": "xsd:string"
+    },
+    "voice": {
+      "@id": "talkpix:voice",
+      "@type": "xsd:string"
+    },
+    "language": {
+      "@id": "talkpix:language",
+      "@type": "xsd:string"
+    },
+    "webhook_url": {
+      "@id": "talkpix:webhook_url",
+      "@type": "xsd:string"
+    },
+    "PutApiV1VideosResponse": "talkpix:PutApiV1VideosResponse",
+    "id": {
+      "@id": "talkpix:id",
+      "@type": "xsd:string"
+    },
+    "object": {
+      "@id": "talkpix:object",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "talkpix:status",
+      "@type": "xsd:string"
+    },
+    "video_url": {
+      "@id": "talkpix:video_url",
+      "@type": "xsd:string"
+    },
+    "resolution": {
+      "@id": "talkpix:resolution",
+      "@type": "xsd:string"
+    },
+    "mode": {
+      "@id": "talkpix:mode",
+      "@type": "xsd:string"
+    },
+    "credits_reserved": {
+      "@id": "talkpix:credits_reserved",
+      "@type": "xsd:integer"
+    },
+    "credits_charged": {
+      "@id": "talkpix:credits_charged",
+      "@type": "xsd:string"
+    },
+    "created_at": {
+      "@id": "talkpix:created_at",
+      "@type": "xsd:dateTime"
+    },
+    "balance": {
+      "@id": "talkpix:balance",
+      "@type": "xsd:integer"
+    },
+    "GetApiV1Videos6C1FResponse": "talkpix:GetApiV1Videos6C1FResponse",
+    "metadata": {
+      "@id": "talkpix:metadata"
+    },
+    "error": {
+      "@id": "talkpix:error"
+    },
+    "GetApiV1V1IdResponse": "talkpix:GetApiV1V1IdResponse",
+    "key": {
+      "@id": "talkpix:key",
+      "@type": "xsd:string"
+    },
+    "upload_url": {
+      "@id": "talkpix:upload_url",
+      "@type": "xsd:string"
+    },
+    "method": {
+      "@id": "talkpix:method",
+      "@type": "xsd:string"
+    },
+    "headers": {
+      "@id": "talkpix:headers"
+    },
+    "expires_in": {
+      "@id": "talkpix:expires_in",
+      "@type": "xsd:integer"
+    },
+    "PostEstimateRequest": "talkpix:PostEstimateRequest",
+    "PostEstimateResponse": "talkpix:PostEstimateResponse",
+    "credits": {
+      "@id": "talkpix:credits",
+      "@type": "xsd:decimal"
+    },
+    "GetMeResponse": "talkpix:GetMeResponse",
+    "email": {
+      "@id": "talkpix:email",
+      "@type": "xsd:string"
+    },
+    "PostUploadsRequest": "talkpix:PostUploadsRequest",
+    "kind": {
+      "@id": "talkpix:kind",
+      "@type": "xsd:string"
+    },
+    "content_type": {
+      "@id": "talkpix:content_type",
+      "@type": "xsd:string"
+    },
+    "PostUploadsResponse": "talkpix:PostUploadsResponse",
+    "GetVideosResponse": "talkpix:GetVideosResponse",
+    "data": {
+      "@id": "talkpix:data",
+      "@container": "@list"
+    },
+    "has_more": {
+      "@id": "talkpix:has_more",
+      "@type": "xsd:boolean"
+    },
+    "next_starting_after": {
+      "@id": "talkpix:next_starting_after",
+      "@type": "xsd:string"
+    },
+    "PostVideosRequest": "talkpix:PostVideosRequest",
+    "image_key": {
+      "@id": "talkpix:image_key",
+      "@type": "xsd:string"
+    },
+    "voice_prompt": {
+      "@id": "talkpix:voice_prompt",
+      "@type": "xsd:string"
+    },
+    "video_prompt": {
+      "@id": "talkpix:video_prompt",
+      "@type": "xsd:string"
+    },
+    "captions": {
+      "@id": "talkpix:captions",
+      "@type": "xsd:boolean"
+    },
+    "audio_url": {
+      "@id": "talkpix:audio_url",
+      "@type": "xsd:string"
+    },
+    "audio_key": {
+      "@id": "talkpix:audio_key",
+      "@type": "xsd:string"
+    },
+    "PostVideosResponse": "talkpix:PostVideosResponse",
+    "GetVideosIdResponse": "talkpix:GetVideosIdResponse",
+    "GetVoicesResponse": "talkpix:GetVoicesResponse",
+    "voices": {
+      "@id": "talkpix:voices",
+      "@container": "@list"
+    },
+    "languages": {
+      "@id": "talkpix:languages",
+      "@container": "@list"
+    },
+    "voice_prompts": {
+      "@id": "talkpix:voice_prompts",
+      "@container": "@list"
+    },
+    "video_prompts": {
+      "@id": "talkpix:video_prompts",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "TalkPix API API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects TalkPix API's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-02) from openapi/_ae-authored/talkpix-openapi-generated.yml.",
+  "dcterms:created": "2026-10-02",
+  "dcterms:source": [
+    "openapi/_ae-authored/talkpix-openapi-generated.yml"
+  ]
+}
