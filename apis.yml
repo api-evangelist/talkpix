@@ -1,0 +1,30 @@
+aid: talkpix
+name: TalkPix API
+description: 'TalkPix API is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
+  and added to the network as a stub for full-pipeline profiling.'
+url: https://raw.githubusercontent.com/api-evangelist/talkpix/refs/heads/main/apis.yml
+x-type: company
+x-source: harvest:new-submission
+x-tier: stub
+x-tier-reason: harvest
+specificationVersion: '0.20'
+created: '2026-10-02'
+modified: '2026-10-02'
+tags:
+- Company
+apis: []
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+common:
+- type: Website
+  url: https://www.talkpix.ai
+- type: Documentation
+  url: https://www.talkpix.ai/developers
+x-submission-notes: Talking-photo video generation API (portrait + script/audio to lip-synced MP4) with
+  webhooks.
+x-submission-probe: root 200; /developers 200 lists /api/v1/uploads, /api/v1/videos; /api/v1/videos 401
+  (auth required); llms.txt 200; no OpenAPI; 404 probe 404
+x-submitted-by: support@talkpix.ai (apis.io/add, 2026-09-29)
