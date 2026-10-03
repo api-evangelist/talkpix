@@ -1,0 +1,69 @@
+openapi: 3.2.0
+info:
+  title: TalkPix Estimate API
+  version: '2026-10-02'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-02: 10 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; TalkPix API has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 9
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-02'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.talkpix.ai/developers
+security:
+- bearer: []
+tags:
+- name: Estimate
+paths:
+  /estimate:
+    post:
+      operationId: post_estimate
+      tags:
+      - Estimate
+      summary: Credits a script will reserve — free
+      x-source: https://www.talkpix.ai/developers
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostEstimateRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostEstimateResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostEstimateRequest:
+      type: object
+      properties:
+        script:
+          type: string
+          description: Script text to estimate
+        resolution:
+          type: string
+          description: '"720p" or "1080p"'
+      required:
+      - script
+      - resolution
+    PostEstimateResponse:
+      type: object
+      properties:
+        credits:
+          type: number
+          description: Credits that would be reserved
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

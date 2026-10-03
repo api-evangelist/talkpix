@@ -83,15 +83,15 @@ common:
   url: https://www.talkpix.ai/developers
 
 apis:
-- aid: talkpix:talkpix-api
-  name: TalkPix API API
-  description: 'TalkPix API API as documented publicly: 10 operations. Contract generated from the documentation by API Evangelist (2026-10-02);
-    not the provider''s own document.'
+- aid: talkpix:talkpix-estimate-api
+  name: TalkPix API Estimate API
+  description: The Estimate API from TalkPix API — 1 operation(s) for estimate.
   humanURL: https://www.talkpix.ai/developers
+  tags:
+  - Estimate
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/talkpix-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/talkpix-estimate-api-openapi.yml
   - type: JSONSchema
     url: json-schema/talkpix-post-videos-request-schema.json
   - type: JSONSchema
@@ -104,7 +104,111 @@ apis:
     url: json-schema/talkpix-get-api-v1-v1-id-response-schema.json
   - type: JSONSchema
     url: json-schema/talkpix-post-uploads-response-schema.json
-
+- aid: talkpix:talkpix-me-api
+  name: TalkPix API Me API
+  description: The Me API from TalkPix API — 1 operation(s) for me.
+  humanURL: https://www.talkpix.ai/developers
+  tags:
+  - Me
+  properties:
+  - type: OpenAPI
+    url: openapi/talkpix-me-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-request-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-videos6-c1-fresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-videos-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-uploads-response-schema.json
+- aid: talkpix:talkpix-talkpix-api-api-api
+  name: TalkPix API TalkPix API API
+  description: The TalkPix API API API from TalkPix API — 1 operation(s) for talkpix api api.
+  humanURL: https://www.talkpix.ai/developers
+  tags:
+  - TalkPix API API
+  properties:
+  - type: OpenAPI
+    url: openapi/talkpix-talkpix-api-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-request-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-videos6-c1-fresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-videos-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-uploads-response-schema.json
+- aid: talkpix:talkpix-uploads-api
+  name: TalkPix API Uploads API
+  description: The Uploads API from TalkPix API — 1 operation(s) for uploads.
+  humanURL: https://www.talkpix.ai/developers
+  tags:
+  - Uploads
+  properties:
+  - type: OpenAPI
+    url: openapi/talkpix-uploads-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-request-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-videos6-c1-fresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-videos-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-uploads-response-schema.json
+- aid: talkpix:talkpix-videos-api
+  name: TalkPix API Videos API
+  description: The Videos API from TalkPix API — 4 operation(s) for videos.
+  humanURL: https://www.talkpix.ai/developers
+  tags:
+  - Videos
+  properties:
+  - type: OpenAPI
+    url: openapi/talkpix-videos-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-request-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-videos6-c1-fresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-videos-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-uploads-response-schema.json
+- aid: talkpix:talkpix-voices-api
+  name: TalkPix API Voices API
+  description: The Voices API from TalkPix API — 1 operation(s) for voices.
+  humanURL: https://www.talkpix.ai/developers
+  tags:
+  - Voices
+  properties:
+  - type: OpenAPI
+    url: openapi/talkpix-voices-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-request-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-videos6-c1-fresponse-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-videos-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-videos-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-get-api-v1-v1-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/talkpix-post-uploads-response-schema.json
 x-submission-notes: Talking-photo video generation API (portrait + script/audio to lip-synced MP4) with webhooks.
 
 x-submission-probe: root 200; /developers 200 lists /api/v1/uploads, /api/v1/videos; /api/v1/videos 401 (auth required); llms.txt 200; no OpenAPI;

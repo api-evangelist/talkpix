@@ -1,0 +1,27 @@
+{
+  "provider": "talkpix",
+  "sources": [
+    "_ae-authored/talkpix-openapi-generated.yml"
+  ],
+  "outputs": [
+    "talkpix-estimate-api-openapi.yml",
+    "talkpix-me-api-openapi.yml",
+    "talkpix-talkpix-api-api-api-openapi.yml",
+    "talkpix-uploads-api-openapi.yml",
+    "talkpix-videos-api-openapi.yml",
+    "talkpix-voices-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "talkpix-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "talkpix-openapi-generated.yml: tagged paths PUT /api/v1/videos -> Videos",
+    "talkpix-openapi-generated.yml: tagged paths GET /api/v1/videos/6c1f\u2026 -> Videos",
+    "talkpix-openapi-generated.yml: tagged paths GET /api/v1/{v1id} -> TalkPix API API",
+    "talkpix-openapi-generated.yml: declared missing tag: TalkPix API API",
+    "apis.yml register: written (+6 apis, 6 total)"
+  ],
+  "skipped": []
+}
