@@ -21,7 +21,14 @@
     "talkpix-openapi-generated.yml: tagged paths GET /api/v1/videos/6c1f\u2026 -> Videos",
     "talkpix-openapi-generated.yml: tagged paths GET /api/v1/{v1id} -> TalkPix API API",
     "talkpix-openapi-generated.yml: declared missing tag: TalkPix API API",
-    "apis.yml register: written (+6 apis, 6 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "talkpix-estimate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "talkpix-me-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "talkpix-talkpix-api-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "talkpix-uploads-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "talkpix-videos-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "talkpix-voices-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
