@@ -1,0 +1,54 @@
+# Kin Score artifact — talkpix — 2026-10-03T024842
+# The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
+---
+kin_score:
+  slug: talkpix
+  schema_version: 0.23.0
+  scored_at: '2026-10-03'
+  run_ts: 2026-10-03T024842
+  composite: 37.5
+  band: thin
+  facets:
+    discoverability: 71.4
+    contract_quality: 24.3
+    contract_governance: 19.7
+    operational_transparency: 0.0
+    developer_ergonomics: 35.7
+    access_clarity: 76.3
+  agent_readiness:
+    score: 18.0
+    band: agent-aware
+    dimensions:
+      spec_presence: true
+      agentic_access: false
+      reversibility_documented: false
+      mcp_server: false
+      auth_clarity: bearer
+      idempotency: false
+      error_semantics: false
+      openapi_examples: partial
+      rate_limit_signal: false
+      event_surface_described: false
+      agent_skills: false
+      well_known_catalog: false
+      consent_identity: false
+      agent_card: false
+      dry_run_mode: false
+      delegated_identity: false
+      protected_resource_metadata: false
+      dynamic_client_registration: false
+      agentic_commerce: false
+  regulatory:
+    applies: true
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.3
+    matched_via: fallback
+  provenance:
+    mcp: derived
+    conformance: derived
+    contracts:
+      total: 7
+      derived: 7
+      coverage: 100.0
+      callable: 0.0

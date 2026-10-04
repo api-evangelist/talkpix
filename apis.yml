@@ -25,6 +25,12 @@ modified: '2026-10-02'
 
 tags:
 - Company
+- Artificial Intelligence
+- Video
+- Talking Photo
+- Media
+tags_raw:
+- Company
 - AI
 - Video
 - Talking Photo
@@ -172,6 +178,8 @@ apis:
   description: The Videos API from TalkPix API — 4 operation(s) for videos.
   humanURL: https://www.talkpix.ai/developers
   tags:
+  - Video
+  tags_raw:
   - Videos
   properties:
   - type: OpenAPI
@@ -193,6 +201,8 @@ apis:
   description: The Voices API from TalkPix API — 1 operation(s) for voices.
   humanURL: https://www.talkpix.ai/developers
   tags:
+  - Voice
+  tags_raw:
   - Voices
   properties:
   - type: OpenAPI
