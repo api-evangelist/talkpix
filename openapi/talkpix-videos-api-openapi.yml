@@ -141,85 +141,34 @@ paths:
         kind: documentation
 components:
   schemas:
-    PutApiV1VideosRequest:
-      type: object
-      properties:
-        image_url:
-          type: string
-        script:
-          type: string
-        voice:
-          type: string
-        language:
-          type: string
-        webhook_url:
-          type: string
-    PostVideosResponse:
+    PutApiV1VideosResponse:
       type: object
       properties:
         id:
           type: string
-          description: Video identifier
         object:
           type: string
-          description: '"video"'
         status:
           type: string
-          description: Initial status, e.g., "processing"
         video_url:
-          type: string
-          description: null until completed
+          type:
+          - string
+          - 'null'
         resolution:
           type: string
-          description: 720p or 1080p
         mode:
           type: string
-          description: script or audio
         credits_reserved:
-          type: number
-          description: Credits reserved for the render
+          type: integer
         credits_charged:
-          type: number
-          description: Will be set after completion
+          type:
+          - string
+          - 'null'
         created_at:
           type: string
-          description: Timestamp of creation
+          format: date-time
         balance:
-          type: number
-          description: Remaining account balance
-    GetApiV1Videos6C1FResponse:
-      type: object
-      properties:
-        status:
-          type: string
-          description: queued → processing → completed | failed
-        video_url:
-          type: string
-          description: The MP4, set once completed.
-        resolution:
-          type: string
-          description: 720p or 1080p
-        mode:
-          type: string
-          description: script or audio
-        credits_reserved:
-          type: number
-          description: Reserved when the render started
-        credits_charged:
-          type: number
-          description: Final charge after render finished
-        created_at:
-          type: string
-          description: Timestamp of creation
-        balance:
-          type: number
-          description: Account balance after reservation
-        metadata:
-          type: object
-          description: Echoed back metadata
-        error:
-          type: object
-          description: Error object on failure
+          type: integer
     GetVideosIdResponse:
       type: object
       properties:
@@ -253,49 +202,72 @@ components:
         error:
           type: object
           description: Error object on failure
-    GetVideosResponse:
+    GetApiV1Videos6C1FResponse:
       type: object
       properties:
-        object:
+        status:
           type: string
-          description: '"list"'
-        data:
-          type: array
-          description: Array of video objects
-        has_more:
-          type: boolean
-          description: Whether more pages exist
-        next_starting_after:
+          description: queued → processing → completed | failed
+        video_url:
           type: string
-          description: Cursor for next page
-    PutApiV1VideosResponse:
+          description: The MP4, set once completed.
+        resolution:
+          type: string
+          description: 720p or 1080p
+        mode:
+          type: string
+          description: script or audio
+        credits_reserved:
+          type: number
+          description: Reserved when the render started
+        credits_charged:
+          type: number
+          description: Final charge after render finished
+        created_at:
+          type: string
+          description: Timestamp of creation
+        balance:
+          type: number
+          description: Account balance after reservation
+        metadata:
+          type: object
+          description: Echoed back metadata
+        error:
+          type: object
+          description: Error object on failure
+    PostVideosResponse:
       type: object
       properties:
         id:
           type: string
+          description: Video identifier
         object:
           type: string
+          description: '"video"'
         status:
           type: string
+          description: Initial status, e.g., "processing"
         video_url:
-          type:
-          - string
-          - 'null'
+          type: string
+          description: null until completed
         resolution:
           type: string
+          description: 720p or 1080p
         mode:
           type: string
+          description: script or audio
         credits_reserved:
-          type: integer
+          type: number
+          description: Credits reserved for the render
         credits_charged:
-          type:
-          - string
-          - 'null'
+          type: number
+          description: Will be set after completion
         created_at:
           type: string
-          format: date-time
+          description: Timestamp of creation
         balance:
-          type: integer
+          type: number
+          description: Remaining account balance
     PostVideosRequest:
       type: object
       properties:
@@ -338,6 +310,34 @@ components:
         metadata:
           type: object
           description: Up to 20 string values echoed back
+    GetVideosResponse:
+      type: object
+      properties:
+        object:
+          type: string
+          description: '"list"'
+        data:
+          type: array
+          description: Array of video objects
+        has_more:
+          type: boolean
+          description: Whether more pages exist
+        next_starting_after:
+          type: string
+          description: Cursor for next page
+    PutApiV1VideosRequest:
+      type: object
+      properties:
+        image_url:
+          type: string
+        script:
+          type: string
+        voice:
+          type: string
+        language:
+          type: string
+        webhook_url:
+          type: string
   securitySchemes:
     bearer:
       type: http
